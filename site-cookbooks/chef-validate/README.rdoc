@@ -1,0 +1,9 @@
+= DESCRIPTION:
+simple cookbook for insecure auth in a vagrant cluster
+
+= REQUIREMENTS:
+
+= ATTRIBUTES:
+
+= USAGE:
+
