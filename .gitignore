@@ -1,0 +1,7 @@
+checksums/
+cookbooks/
+.vagrant
+private/*
+!private/readme.md
+tmp
+.chef/data_bag_secret
