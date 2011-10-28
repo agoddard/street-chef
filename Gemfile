@@ -1,0 +1,5 @@
+source 'http://rubygems.org'
+  gem 'vagrant'
+  gem 'chef'
+  gem 'librarian'
+  gem 'spiceweasel'
