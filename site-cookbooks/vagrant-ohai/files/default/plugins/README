@@ -1,0 +1,1 @@
+This directory contains custom ohai plugins for vagrant nodes.
