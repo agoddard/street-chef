@@ -7,4 +7,4 @@ validation_key           '../private/validation.pem'
 chef_server_url          'http://44.44.44.10:4000'
 cache_type               'BasicFile'
 cache_options( :path => 'checksums' )
-cookbook_path     ["cookbooks"]
+cookbook_path     ["cookbooks", "site-cookbooks"]
