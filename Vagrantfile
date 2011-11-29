@@ -1,7 +1,7 @@
 Vagrant::Config.run do |config|
   config.vm.define :chef do |chef_config|
     chef_config.vm.host_name = 'chef.streetchef.local'
-    chef_config.vm.network "44.44.44.10"
+    chef_config.vm.network "192.168.234.10"
     chef_config.vm.box = "ubuntu-lucid-32"
     chef_config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
     chef_config.vm.provision :chef_solo do |chef|
@@ -16,7 +16,7 @@ Vagrant::Config.run do |config|
       chef.add_recipe("vagrant-ohai")
       chef.json={
       :chef=> {
-        :server_url=> "http://44.44.44.10:4000",
+        :server_url=> "http://192.168.234.10:4000",
         :webui_enabled=> true,
         :init_style => "init"
       }
@@ -27,11 +27,11 @@ Vagrant::Config.run do |config|
 #example clients
   config.vm.define :app1 do |app1config|
     app1config.vm.host_name = 'app1.streetchef.local'
-    app1config.vm.network "44.44.44.11"
+    app1config.vm.network "192.168.234.11"
     app1config.vm.box = "ubuntu-lucid-32"
     app1config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
     app1config.vm.provision :chef_client do |chef|
-      chef.chef_server_url = "http://44.44.44.10:4000"
+      chef.chef_server_url = "http://192.168.234.10:4000"
       chef.validation_client_name = "chef-validator"
       chef.validation_key_path = "private/validation.pem"
     end
@@ -39,11 +39,11 @@ Vagrant::Config.run do |config|
 
   config.vm.define :app2 do |app2config|
     app2config.vm.host_name = 'app2.streetchef.local'
-    app2config.vm.network "44.44.44.12"
+    app2config.vm.network "192.168.234.12"
     app2config.vm.box = "ubuntu-lucid-32"
     app2config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
     app2config.vm.provision :chef_client do |chef|
-      chef.chef_server_url = "http://44.44.44.10:4000"
+      chef.chef_server_url = "http://192.168.234:4000"
       chef.validation_client_name = "chef-validator"
       chef.validation_key_path = "private/validation.pem"
     end
