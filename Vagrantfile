@@ -13,6 +13,7 @@ Vagrant::Config.run do |config|
       chef.add_recipe("chef::bootstrap_server")
       chef.add_recipe("chef-validate")
       chef.add_recipe("chef-client::service")
+      chef.add_recipe("vagrant-ohai")
       chef.json={
       :chef=> {
         :server_url=> "http://44.44.44.10:4000",
