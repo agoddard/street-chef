@@ -14,7 +14,7 @@ https://www.virtualbox.org/wiki/Downloads
 Instructions
 ------------
 
-1. `git clone git@github.com:agoddard/street-chef.git; cd street-chef`
+1. `git clone git://github.com/agoddard/street-chef.git; cd street-chef`
 
 2. `bundle install`
 
