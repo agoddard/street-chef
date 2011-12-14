@@ -43,7 +43,7 @@ Vagrant::Config.run do |config|
     app2config.vm.box = "ubuntu-lucid-32"
     app2config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
     app2config.vm.provision :chef_client do |chef|
-      chef.chef_server_url = "http://192.168.234:4000"
+      chef.chef_server_url = "http://192.168.234.10:4000"
       chef.validation_client_name = "chef-validator"
       chef.validation_key_path = "private/validation.pem"
     end
