@@ -23,3 +23,8 @@
     to "#{node['languages']['ruby']['bin_dir']}/#{svc}"
   end
 end
+
+# Fix permissions on /var/run/chef so that chef launchers in /etc/init.d can write pid files.
+execute "chown chef:chef #{node["chef_client"]["run_path"]};" do
+  only_if "test -d #{node["chef_client"]["run_path"]};"
+end
