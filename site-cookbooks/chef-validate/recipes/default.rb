@@ -58,7 +58,7 @@ end
 
 # setup a default workstation client for knife
 execute "vagrant-client" do
-  command "knife client create workstation -n -a --defaults -f /root/.chef/workstation.pem"
+  command "knife client create workstation -n -a --defaults -f /root/.chef/workstation.pem -d"
   creates "/root/.chef/workstation.pem"
   action :run
 end
