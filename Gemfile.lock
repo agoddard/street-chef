@@ -22,7 +22,7 @@ GEM
     erubis (2.7.0)
     ffi (1.0.10)
     highline (1.6.2)
-    i18n (0.6.0)
+    i18n (0.6.11)
     json (1.5.2)
     librarian (0.0.9)
       chef (>= 0.10)
